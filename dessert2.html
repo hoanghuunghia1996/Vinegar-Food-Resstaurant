@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Meals-Dessert </title>
+        <link rel="shortcut icon" type="image/x-icon" href="images/logo/icon.png"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link rel="stylesheet" href="VinegarFood.css">
+        <link rel="stylesheet" href="file css snowdown.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link rel='stylesheet' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+        <script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.js"></script>
+        <link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+        <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+        <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    </head>
+<style>
+
+#Dessert {
+ 
+ background-size: .12em 100%;
+ font: 16em/1 Arial;
+ background: #84e8dc;
+ background: -moz-linear-gradient(-45deg, #84e8dc 0%, #f4ed8b 100%);
+ background: -webkit-linear-gradient(-45deg, #84e8dc 0%, #f4ed8b 100%);
+ background: linear-gradient(135deg, #84e8dc 0%, #f4ed8b 100%);
+}
+
+.text--line {
+ font-size: .5em;
+}
+
+svg {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin-top:-70px;
+}
+
+.text-copy {
+ fill: none;
+ stroke: white;
+ stroke-dasharray: 7% 28%;
+ stroke-width: 3px;
+ -webkit-animation: stroke-offset 5s infinite linear;
+         animation: stroke-offset 5s infinite linear;
+}
+.text-copy:nth-child(1) {
+ stroke: rgba(0, 0, 0, 0.815);
+ stroke-dashoffset: 7%;
+}
+.text-copy:nth-child(2) {
+ stroke: #D61C59;
+ stroke-dashoffset: 14%;
+}
+.text-copy:nth-child(3) {
+ stroke: #E7D84B;
+ stroke-dashoffset: 21%;
+}
+.text-copy:nth-child(4) {
+ stroke: #EFEAC5;
+ stroke-dashoffset: 28%;
+}
+.text-copy:nth-child(5) {
+ stroke: #1B8798;
+ stroke-dashoffset: 35%;
+}
+
+@-webkit-keyframes stroke-offset {
+ 50% {
+   stroke-dashoffset: 35%;
+   stroke-dasharray: 0 87.5%;
+ }
+}
+
+@keyframes stroke-offset {
+ 50% {
+   stroke-dashoffset: 35%;
+   stroke-dasharray: 0 87.5%;
+ }
+}
+.main1{
+ display: flex;
+ flex-flow: row wrap;
+ width: 100%;
+ justify-content: center;
+}
+.column{
+ flex-basis: 1 10px;
+ width: calc(100% / 3 - 10px);
+ margin: 5px;
+ padding: 0;
+}
+figure {
+   position: relative; 
+ overflow: hidden;
+ margin: 0;
+ height: 100%;
+ width: 100%;
+ filter: grayscale(.8);
+}
+figure img{
+ width: 100%;;
+ height: 45%;
+ margin-top:170px;
+}
+figure::before {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 2;
+   display: block;
+   content: '';
+   width: 0;
+   height: 0;
+   background: rgba(0,0,0,.2);
+   border-radius: 100%;
+   transform: translate(-50%, -50%);
+   opacity: 0;
+}
+figure:hover{
+ animation: bloom ease-in-out .75s forwards;
+}
+figure:hover::before {
+   animation: circle .75s;
+}
+@keyframes bloom {
+   0% {
+       filter: grayscale(.8);
+   }
+   40% {
+       filter: grayscale(.5);
+   }
+   100% {
+       filter: grayscale(0);
+   }
+}
+@keyframes circle {
+   0% {
+       opacity: .5;
+   background: rgba(213,156,34,.2);
+   
+   }
+   40% {
+       opacity: 1;
+   background: rgba(213,34,160,.2);
+   }
+   100% {
+       width: 200%;
+       height: 200%;
+       opacity: 0;
+   }
+}
+.main1 .column span {
+ position: absolute;
+ z-index: 2;
+ top: calc(150px - 20px);
+ left: 0;
+ right: 0;
+ background: rgba(0, 0, 0, 0.7);
+ padding: 10px 50px;
+ margin: 0 45px;
+ text-align: center;
+ font-size: 24px;
+ color: white;
+ font-weight: 300;
+ font-family: "Raleway", sans-serif;
+ letter-spacing: 0.2px;
+ transition: all 0.3s ease-out;
+ margin-top:200px;
+}
+.main1 .column:hover span {
+ opacity: 0;
+}
+@media (max-width: 800px){
+    .main1 .column span {
+        display: none;
+    }
+}
+</style>
+    <body>
+        <div class="nav-center">
+            <ul class="menu-center">
+                <li><a href="#" onclick="toggleMenu()">Return this page</a></li>
+                <li><a href="./index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="./index.html#Awards" onclick="toggleMenu()">Awards</a></li>
+                <li><a href="./index.html#Gallery" onclick="toggleMenu()">Gallery</a></li>
+                <li><a href="./index.html#Recipe" onclick="toggleMenu()">Recipe</a></li>
+                <li><a href="./index.html#Catering" onclick="toggleMenu()">Catering</a></li>
+                <li><a href="#header-tag" onclick="toggleMenu()">Meals</a></li>
+                <li><a href="./index.html#Aboutus" onclick="toggleMenu()">About team</a></li>
+                <li><a href="#footer" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+      <header id="header-tag">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Brand -->
+                <img src="Images/12.jpg" alt="logo" >
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon my-toggler"></span>
+                </button>
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                                Discovery
+                            </a>
+                            <div class="dropdown-menu text-center bg-transparent" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./index.html#Awards">Awards</a>
+                                <a class="dropdown-item" href="./index.html#Gallery">Gallery</a>
+                                <a class="dropdown-item" href="./index.html#Recipe">Recipe</a>
+                                <a class="dropdown-item" href="./index.html#Catering">Catering</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#Aboutus">About Team</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="header-img" class="container-fluid" style="background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);">
+            
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4 col-xl-2 mb-4 mt-4">
+                        <div class="content-recipe-header thumbex-header">
+                            <a href="./Regular.html">
+                                <div class="thumbnail-header" id="Regular-header">
+                                        <img src="Images/vinegarfood/Gallery (1)/regularBeef/beef steak.jpg" alt="Regular">
+                                        <span>Regular</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-xl-2 mb-4 mt-4">
+                        <div class="content-recipe-header thumbex-header" id="Lunch-header">
+                            <div class="thumbnail-header">
+                                <a href="./Lunch.html" >
+                                    <img src="Images/vinegarfood/Gallery (1)/Seafood/salmon.png" alt="Lunch">
+                                    <span>Lunch</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-xl-2 mb-4 mt-4">
+                        <div class="content-recipe-header thumbex-header" id="Snacks-header">
+                            <div class="thumbnail-header">
+                                <a href="./Snack.html">
+                                    <img src="Images/vinegarfood/Gallery (1)/Burgers/buger1.jpg" alt="Snacks">
+                                    <span>Snacks</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offset-1 col-4  offset-xl-0 col-xl-2 mb-4 mt-xl-4" >
+                        <div class="content-recipe-header thumbex-header" id="Dessert-header">
+                            <div class="thumbnail-header">
+                                <a href="./dessert2.html">
+                                    <img src="Images/vinegarfood/Gallery (1)/Drink/LavaCake.jpg" alt="Dessert">
+                                    <span>Dessert</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-4 col-xl-2 mb-4 mt-xl-4">
+                        <div class="content-recipe-header thumbex-header" id="Beverages-header">
+                            <div class="thumbnail-header">
+                                <a href="./Beverages.html">
+                                    <img  src="Images/vinegarfood/Gallery (1)/Drink/StrawberyMojito.jpg" alt="Beverages">
+                                    <span>Beverages</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+      </header>
+    
+      <!-- Nav bottom -->
+      <div class="navbar-bot">
+          <div class="toggle" onclick="toggleMenu()">
+          </div>
+          <div class="menu-bot">
+              <div class="main">
+                  <a href="./index.html">Home</a>
+                  <a href="./index.html#Awards">Awards</a>
+                  <a href="./index.html#Gallery" >Gallery</a>
+                  <a href="./index.html#Recipe" >Recipe</a>
+                  <a href="./index.html#Catering">Catering</a>
+                  <a href="#header-tag">Meals</a>
+                  <a href="./index.html#Aboutus" >About team</a>
+                  <a href="#footer" >Contact</a>
+              </div>
+          </div>
+      </div>
+
+    <!-- Dessert page -->
+      <div id="Dessert">
+        <svg viewBox="0 0 800 600">
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="35%" class="text--line">
+                Desserts
+            </symbol>
+            <g class="g-ants">
+              <use xlink:href="#s-text"
+                class="text-copy"></use>     
+              <use xlink:href="#s-text"
+                class="text-copy"></use>     
+              <use xlink:href="#s-text"
+                class="text-copy"></use>     
+              <use xlink:href="#s-text"
+                class="text-copy"></use>     
+              <use xlink:href="#s-text"
+                class="text-copy"></use>     
+            </g>
+          </svg>
+          <div class="main1">
+            <div class="column">
+                  <figure><img src="Images/vinegarfood/Gallery (1)/Desserts/LavaCake.jpg" /><span>Lava Cake</span></figure>
+              </div>
+              <div class="column">
+                  <figure><img src="Images/vinegarfood/Gallery (1)/Desserts/bananaFosterCrepes.jpg" /><span>Banana Foster Crepes</span></figure>
+              </div>
+              <div class="column">
+                  <figure><img src="Images/vinegarfood/Gallery (1)/Desserts/PannaCotta.jpg" /><span>Panna Cotta</span></figure>
+              </div>
+      </div>
+      </div>
+      <!--Begin Footer -->
+    <footer id="footer"class="container-fluid" style="color:white;background-color: black; " >       
+      <!-- <footer id="contact" class="container-fluid" style="background-color: rgb(26, 26, 26);color: white; padding:2rem 0;"> -->
+          <div class="main">
+              <br>
+              <div class="row">
+                  <div class="col-12 col-sm-6">
+                      <h2>Contact</h2>
+                      <span>
+                          Address: 590 Cach Mang Thang 8 - District 3 - HCM city.
+                          <br>
+                          Tel: (+84)708619547.
+                          <br>
+                          Email: hoanghuunghia5253@gmail.com.
+                      </span>
+                      <h2>Feedback</h2>
+                      <form action="">
+                          <div class="d-flex mb-2">
+                              <input id="email-feedback" class="form-control mr-2" type="email" placeholder="Input your Email" pattern="[a-z0-9_\.]{3,}@[a-z0-9]{2,}\.([a-z0-9]{2,4})" title="E.g: 123@12.12" required>
+                              <button type="button" class="btn btn-primary" onclick="return successFeedback()"> Send</button>
+                          </div>
+                          <div>
+                              <textarea id="text-feedback" class="form-control" id="text-feed-back" name=" " rows="4" cols="50" required></textarea>
+                          </div>   
+                      </form>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                      <iframe style="border-radius: 15px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919. 32531626685!2d106.66410831480086!3d10.78637699231475!2m3!1f0!2f0!3f0!3m2! 1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed23c80767d%3A0x5a981a5efee9fd7d!2z
+                      NTkwIEPDoWNoIE3huqFuZyBUaMOhbmcgVMOhbSwgUGjGsOG7nW5nIDExLCBRdeG6rW4gMywgVG jDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1597242887414!5m2!1svi!2s " 
+                      width="100%" height="320px" frameborder="0" style="border:0;" allowfullscreen=" " 
+                      aria-hidden="false" tabindex="0"></iframe>
+                  </div>
+              </div>
+          </div>
+          <br><br><br>
+      </footer>
+</body>
+<script src="VinegarFood.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</html>
+          

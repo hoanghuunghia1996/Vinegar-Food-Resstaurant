@@ -1,0 +1,491 @@
+/* All */
+
+body {
+    margin: 0; padding: 0; 
+    font-family: Arial, sans-serif;font-size: 20px;
+}
+
+h3 { color: rgb(241, 241, 56); text-shadow: -5px 5px 30px yellow;}
+
+hr { background-color: yellow; }
+
+.main { max-width: 1000px; margin: auto; }
+
+/* Nav-center */
+.nav-center{
+    z-index: 50000;
+    position: fixed;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 10%;
+    display:none;
+    
+}
+.nav-center.togglenavcenter {
+    display:block;
+}
+.nav-center .menu-center li{
+    list-style: none;
+    line-height: 50px;
+}
+.nav-center .menu-center li a{
+    text-decoration: none;
+    color:black;
+    font-size: 25px;
+    
+    cursor: pointer;
+}
+
+/* Button back to top */
+.btn-top {
+    background-color:rgb(129, 111, 88); bottom: 20px; right:20px;
+    width: 50px; height: 50px; position: fixed;
+    border-radius: 15%;  padding-top: 5px;cursor: pointer;
+    text-align: center; text-decoration: none;
+    font-size: 32px; color: white; 
+    box-shadow: 0 2px 5px rgba(74, 73, 73, 0.749);
+    z-index: 30000; display: none;
+}
+
+/* Navbar */
+.navbar { height: 90px; background:none; }
+
+.navbar li { margin-right: 50px; }
+
+.navbar ul li a {font-size: 25px; color: white; z-index: 10000;position: relative; }
+
+.navbar ul li a:hover { color: yellow !important; text-decoration: none !important; }
+
+.navbar img { width: 23%;height: 10%;}
+
+/* .navbar.sticky { background-color: white; opacity: 100%; height: 60px;  }
+
+.navbar.sticky img { width: 17%; height: 8%;} */
+
+.navbar ul li a { font-size: 20px; color: black !important; background-color: white} 
+
+/* Navigation bottom */
+.navbar-bot {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    visibility: hidden;
+    z-index: 20000;
+  }
+  .navbar-bot.sticky {
+      visibility: visible;
+  }
+  .navbar-bot a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar-bot a:hover {
+    background: #f1f1f1;
+    color: black;
+  }
+  
+  .navbar-bot a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .main-bot {
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: 991px){
+    .navbar-bot{
+        text-align: center;
+    }
+    .toggle{
+        padding-left: 100%;
+        width: 40px;
+        height: 80px;
+        background: url("Images/vinegarfood/background/menu.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }  
+    .menu-bot{
+        display:none;
+    }
+}
+/* header-img */
+.content-recipe-header {
+    padding: 10px; 
+    text-align: center;
+}
+
+.thumbex-header {
+    height: 300px;
+    overflow: hidden;
+    outline: 4px solid white;
+    outline-offset: -20px;
+}
+  .thumbex-header .thumbnail-header {
+    height: 300px;
+    position: relative;
+    opacity: 0.88;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-out;
+  }
+  .thumbex-header .thumbnail-header img {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    height: 115%;
+    transform: translate(-50%, -50%);
+  }
+.thumbex-header .thumbnail-header span {
+    font-size: 24px;color: white;font-weight: 300;font-family: "Raleway", sans-serif;letter-spacing: 0.2px;
+    position: absolute;
+    z-index: 2;
+    top: calc(100% - 60%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    transition: all 0.3s ease-out;
+}
+
+#Regular-header span { left:20%}
+#Lunch-header span { left:25%}
+#Snacks-header span { left:20%}
+#Dessert-header span { left:22%}
+#Beverages-header span { left:12%}
+
+.thumbex-header .thumbnail-header:hover { transform: scale(1.15, 1.15); opacity: 1;}
+
+.thumbex-header .thumbnail-header:hover span { opacity: 0; }
+@media (max-width:630px) {
+    .thumbex-header {
+        height: 200px;
+    }
+    .thumbex-header .thumbnail-header {
+        height: 200px;
+    }
+    .thumbex-header .thumbnail-header span {
+        font-size: 18px;
+    }
+}
+@media (max-width:500px) {
+    .thumbex-header {
+        height: 150px;
+    }
+    .thumbex-header .thumbnail-header {
+        height: 150px;
+    }
+    .thumbex-header .thumbnail-header span {
+        font-size: 18px;
+        top: 30%;
+        background:none;
+        padding: 0;
+        font-weight: bolder;
+    }
+    .thumbex-header { 
+        outline: none;
+        
+    }
+}
+@media (max-width:450px) {
+    .thumbex-header {
+        height: 150px;
+    }
+    .thumbex-header .thumbnail-header {
+        height: 150px;
+    }
+    .thumbex-header .thumbnail-header span {
+        font-size: 18px;
+        top: 30%;
+    }
+   
+}
+@media (max-width:410px) {
+    .thumbex-header {
+        height: 100px;
+    }
+    .thumbex-header .thumbnail-header {
+        height: 100px;
+    }
+    .thumbex-header .thumbnail-header span {
+        font-size: 18px;
+        top: 30%;
+    }
+    #Regular-header span { left:15%}
+    #Lunch-header span { left:22%}
+    #Snacks-header span { left:20%}
+    #Dessert-header span { left:14%}
+    #Beverages-header span { left:5%}
+}
+
+/* Awards */
+#Awards {
+    background-image: url("Images/vinegarfood/background/bb.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: cover;
+    text-align: center;
+}
+#Awards p {
+    font-style: italic;
+    font-size: 23px;
+    color: white;
+}
+
+/* Gallery  */
+
+#Gallery {
+   
+    text-align: center;
+    background:url(Images/vinegarfood/background/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: cover;
+    text-align: center;
+}
+.gallery-title {    
+    font-size: 36px; color: #42B32F; text-align: center; 
+    font-weight: 500; margin-bottom: 30px;
+}
+
+.gallery-title:after { 
+    content: ""; position: absolute; width: 17.5%;   
+    left: 40.5%;  height: 45px; border-bottom: 1px solid #5e5e5e;
+}
+
+.filter-button {  
+    font-size: 18px; border: 1px solid #42B32F;  border-radius: 5px; 
+    text-align: center; color: #42B32F; margin-bottom: 30px;
+}
+
+.filter-button:hover { 
+    color: #ffffff; background-color: #42B32F;
+    transform: scale(1); 
+}
+
+.filter-button.active {  background-color: #42B32F;  color: white;}
+
+.img-responsive {width: 100%; height: 100%; opacity: 80%; border-radius: 20px;}
+.img-responsive:hover {opacity: 100%;}
+
+.gallery_product { margin-bottom: 30px; width: 100%; height: 300px; padding:30px;}
+
+#div-expandimg {
+    position: fixed;
+    display: none;
+    z-index: 1006;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    background: rgba(6,6,6,0.8);
+} 
+
+#divimg{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#divimg img{
+    border-radius: 20px;
+    width: 50%;
+    max-height: 80vh;
+}
+
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 52px;
+    cursor: pointer;
+}
+/* Recipe */
+
+#Recipe {
+    text-align: center;
+    background: -webkit-linear-gradient(to right, #a7bfe8, #6190e8);
+    background: linear-gradient(to right, #a7bfe8, #6190e8);
+}
+
+.content-recipe {
+    padding: 10px; 
+    /* border: 1px solid; border-radius: 10px; */
+    /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); */
+    /* background-image: linear-gradient(to right top, #86f564, #b6b9a2, #c7c794, #d0dba1, #8cf183); */
+    /* background-color: rgb(248, 205, 135);  */    
+    text-align: center;
+}
+
+.modal-content { background-image: linear-gradient(to right top, #86f564, #b6b9a2, #c7c794, #d0dba1, #8cf183);}
+
+.modal-header-recipe img { width: 95%; }
+
+.modal-header-recipe button { width: 50px; height: 50px; }
+
+.modal-header-recipe h4 { font-weight: bold;}
+
+.img-recipe {width: 300px; height: 250px; padding:0px 10px;}
+.btn {
+    border: none; outline: none; padding: 12px 16px;
+    background-color: green; cursor: pointer;
+    color: #000; font-weight: bold;
+}
+
+.btn:hover { opacity: 50%; }
+
+.main h4, .main p { color: #000; }
+
+p.info-main { color: #000; text-align: center !important; }
+
+.main-recipe { text-align: center; }
+
+.modal-footer-recipe { text-align: right; padding: 10px 30px 0px 0px ; height: 80px;}
+
+
+ .thumbex {
+    height: 300px;
+    overflow: hidden;
+    outline: 4px solid white;
+    outline-offset: -20px;
+   
+  }
+  .thumbex .thumbnail {
+    overflow: hidden;
+    min-width: 250px;
+    height: 300px;
+    position: relative;
+    opacity: 0.88;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-out;
+  }
+  .thumbex .thumbnail img {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    height: 115%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+  }
+  .thumbex .thumbnail span {
+    position: absolute;
+    z-index: 2;
+    top: calc(150px - 20px);
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 50px;
+    margin: 0 45px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease-out;
+  }
+  .thumbex .thumbnail:hover {
+    backface-visibility: hidden;
+    transform: scale(1.15, 1.15);
+    opacity: 1;
+  }
+  .thumbex .thumbnail:hover span {
+    opacity: 0;
+  }
+
+
+/* Catering  */
+#Catering {
+    background-color:rgb(31, 31, 31);
+    text-align: center;
+    
+}
+#catering img { width: 100%; padding: 20px; position: relative; }
+
+#catering-img-right { margin-left: -50px; }
+
+#h3-catering {
+    color: white; text-shadow: -5px 5px 30px rgb(240, 240, 221);
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px; opacity: 80%;
+}
+
+#btn-booking {
+    background-color: goldenrod;
+    outline: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+#carouselView1 .carousel-inner {
+    border-radius: 25px; border: 4px solid rgb(24, 23, 38);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, .164);
+}
+
+#carouselView1 { height: 450px }
+
+#carouselView1 img { width: 100%; height: 100%; }
+
+
+@media (max-width: 992px) {
+    #carouselView1 { height: 350px }
+}
+@media (max-width: 768px) {
+    #carouselView1 { height: 250px }
+}
+@media (max-width: 400px) {
+    #carouselView1 { height: 150px }
+}
+
+/* About team */
+#Aboutus {
+    text-align: center;
+}
+#Aboutus h4 {
+    font-size: 35px;
+    color: white;
+}
+#fb, #ins, #twi  {
+    font-size: 50px;
+	color: rgb(0, 119, 255);
+}
+
+#ins, #twi {
+    margin-left: 30px;
+}
+
+#fb:hover, #ins:hover, #twi:hover {
+    transform: scale(1.1);
+}
+
+
+/* Footer */
+iframe { width: 100%; }
+
+
+
+
+
+
+
